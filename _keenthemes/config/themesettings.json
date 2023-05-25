@@ -1,6 +1,6 @@
 {
   "name": "metronic",
-  "layoutDir":"layout/metronic/demo1/",
+  "layoutDir":"layout/",
   "direction": "ltr",
   "modeSwitchEnabled": true,
   "modeDefault": "light",
