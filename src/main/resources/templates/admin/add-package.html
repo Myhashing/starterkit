@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Investment Package</title>
+</head>
+<body>
+<h1>Add Investment Package</h1>
+<form action="#" th:action="@{/admin/package/add}" th:object="${package}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" th:field="*{name}" id="name" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea th:field="*{description}" id="description" required></textarea>
+    <br>
+
+    <label for="duration">Duration:</label>
+    <input type="number" th:field="*{duration}" id="duration" required>
+    <br>
+    <label for="roi">Return On Investment:</label>
+    <input type="number" th:field="*{returnOnInvestment}" id="roi" required>
+    <br>
+    <label for="minInvestmentAmount">Minimum Investment Amount:</label>
+    <input type="number" th:field="*{minInvestmentAmount}" id="minInvestmentAmount" required>
+    <br>
+    <input type="submit" value="Add Package">
+</form>
+</body>
+</html>

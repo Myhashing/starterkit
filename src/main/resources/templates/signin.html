@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta name="robots" content="noindex, nofollow">
+
+
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.69.5/css/main.cdn.min.css">
+    <style id="custom-styles-container">
+
+
+        :root {
+            --primary-color: #FF5500;
+        }
+
+        :root {
+            --button-font-color: #F2F0ED;
+        }
+
+        :root {
+            --secondary-button-border-color: #2F2C2A;
+            --social-button-border-color: #2F2C2A;
+            --radio-button-border-color: #2F2C2A;
+        }
+
+        :root {
+            --secondary-button-text-color: #8C877D;
+        }
+
+        :root {
+            --link-color: #8C877D;
+        }
+
+        :root {
+            --title-font-color: #F2F0ED;
+        }
+
+        :root {
+            --font-default-color: #8C877D;
+        }
+
+        :root {
+            --widget-background-color: #0D0C0C;
+        }
+
+        :root {
+            --box-border-color: #1E1C1B;
+        }
+
+        :root {
+            --font-light-color: #8C877D;
+        }
+
+        :root {
+            --input-text-color: #F2F0ED;
+        }
+
+        :root {
+            --input-border-color: #2F2C2A;
+            --border-default-color: #2F2C2A;
+        }
+
+        :root {
+            --input-background-color: #292624;
+        }
+
+        :root {
+            --icon-default-color: #8C877D;
+        }
+
+        :root {
+            --error-color: #ff5c57;
+            --error-text-color: #ffffff;
+        }
+
+        :root {
+            --success-color: #9dc89f;
+        }
+
+        :root {
+            --base-focus-color: #8C877D;
+            --transparency-focus-color: rgba(140, 135, 125, 0.15);
+        }
+
+        :root {
+            --base-hover-color: #000000;
+            --transparency-hover-color: rgba(0, 0, 0, var(--hover-transparency-value));
+        }
+
+
+        html, :root {
+            font-size: 16px;
+            --default-font-size: 16px;
+        }
+
+        body {
+            --title-font-size: 1.5rem;
+            --title-font-weight: var(--font-default-weight);
+        }
+
+        .c8b36672e {
+            font-size: 0.875rem;
+            font-weight: var(--font-default-weight);
+        }
+
+        .c19c1dfb0 {
+            font-size: 0.875rem;
+            font-weight: var(--font-default-weight);
+        }
+
+        .c46ddf851, .c1777cefd {
+            font-size: 1rem;
+            font-weight: var(--font-default-weight);
+        }
+
+        .c91597ca9 {
+            font-size: 1rem;
+            font-weight: var(--font-default-weight);
+        }
+
+        .c00c1d492, .cad38ddb6 {
+            font-size: 0.875rem;
+            font-weight: var(--font-default-weight) !important;
+        }
+
+        .cad38ddb6, .c00c1d492 {
+            text-decoration: underline;
+        }
+
+
+        :root {
+            --button-border-width: 2px;
+            --social-button-border-width: 2px;
+            --radio-border-width: 2px;
+        }
+
+        body {
+            --button-border-radius: 4px;
+            --radio-border-radius: 4px;
+        }
+
+        :root {
+            --input-border-width: 0px;
+        }
+
+        body {
+            --input-border-radius: 4px;
+        }
+
+        :root {
+            --border-radius-outer: 12px;
+        }
+
+        :root {
+            --box-border-width: 3px;
+        }
+
+        body {
+            --shadow-component-outer: none;
+        }
+
+
+        body {
+            --logo-alignment: 0 auto;
+        }
+
+
+        .cd0857b18 {
+            content: url('https://uploads-ssl.webflow.com/5ff21113877dd72b9f913b35/6324790abeb2ff101c9a4bb9_Group%205866.svg');
+        }
+
+        body {
+            --logo-height: 74px;
+        }
+
+        .cd0857b18 {
+            height: var(--logo-height);
+        }
+
+
+        body {
+            --header-alignment: center;
+        }
+
+
+        .c1686c1d6 {
+            --page-background-alignment: center;
+        }
+
+        body {
+            --page-background-color: #181717;
+        }
+
+
+    </style>
+    <style>
+        /* By default, hide features for javascript-disabled browsing */
+        /* We use !important to override any css with higher specificity */
+        /* It is also overriden by the styles in <noscript> in the header file */
+        .no-js {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+    </style>
+    <noscript>
+        <style>
+            /* We use !important to override the default for js enabled */
+            /* If the display should be other than block, it should be defined specifically here */
+            .js-required {
+                display: none !important;
+            }
+
+            .no-js {
+                clip: auto;
+                clip-path: none;
+                height: auto;
+                overflow: auto;
+                position: static;
+                white-space: normal;
+                width: var(--prompt-width);
+            }
+        </style>
+    </noscript>
+
+    <style>
+        .footer {
+            background-color: #0D0C0C;
+            color: #8C877D;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 12px 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            /* Use a high z-index for future-proofing */
+            z-index: 10;
+        }
+
+        .footer a {
+            text-decoration: underline;
+            color: #8C877D;
+            font-size: 14px;
+        }
+    </style>
+    <title>Log in | Hiro Platform</title>
+
+</head>
+<body class="_widget-auto-layout" data-new-gr-c-s-check-loaded="8.906.0" data-gr-ext-installed="">
+<main class="_widget login">
+    <section class="c00d3c52e _prompt-box-outer c6de3e25c">
+        <div class="c8b72cd16 cb993cc31">
+
+
+            <div class="c9dcd526c">
+                <header class="c29cd2901 c5a655461">
+                    <div title="Hiro" id="custom-prompt-logo"
+                         style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+
+                    <img class="cd0857b18 c4f0704ae" id="prompt-logo-center"
+                         src="https://uploads-ssl.webflow.com/5ff21113877dd72b9f913b35/63246c915b85424f62371c34_Group%205855.png"
+                         alt="Hiro">
+
+
+                    <h1 class="cf39ec6c9 cad56ad79">Welcome</h1>
+
+
+                    <div class="c8b36672e caa8c03cf">
+
+                        <p class="c7f987bb8 c6338b577">Log in to Coinnich to continue to Ferya Platform.</p>
+
+                    </div>
+                </header>
+
+                <div class="c19c1dfb0 cd19751eb">
+
+
+                    <form th:action="@{/login}" method="post" class="c734e0caa c6e16f6ca" data-form-primary="true">
+
+
+                        <div class="c8c17eeb0 c451c762a">
+                            <div class="cc35ab7a6">
+                                <div class="input-wrapper _input-wrapper">
+                                    <div class="ce314e0e0 c799a29d7 text c9f36efca caadce271" data-action-text=""
+                                         data-alternate-action-text="">
+                                        <label class="c91597ca9 no-js c9a0380c1 cdacef433" for="username">
+                                            Email address
+                                        </label>
+
+                                        <input class="input c3c2b240e cd3adfc2e" inputmode="email" name="username"
+                                               id="username" type="text" value="" required="" autocomplete="username"
+                                               autocapitalize="none" spellcheck="false" autofocus="">
+
+                                        <div class="c91597ca9 js-required c9a0380c1 cdacef433"
+                                             data-dynamic-label-for="username" aria-hidden="true">
+                                            Email address
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="input-wrapper _input-wrapper">
+                                    <div class="ce314e0e0 c799a29d7 password cfdfd9540 caadce271" data-action-text=""
+                                         data-alternate-action-text="">
+                                        <label class="c91597ca9 no-js c9a0380c1 c5995eb7a" for="password">
+                                            Password
+                                        </label>
+
+                                        <input class="input c3c2b240e c17a8e7e0" name="password" id="password"
+                                               type="password" required="" autocomplete="current-password"
+                                               autocapitalize="none" spellcheck="false">
+
+                                        <div class="c91597ca9 js-required c9a0380c1 c5995eb7a"
+                                             data-dynamic-label-for="password" aria-hidden="true">
+                                            Password
+                                        </div>
+
+                                        <button type="button" class="c46ddf851 ulp-button-icon c4441db6e _button-icon"
+                                                data-action="toggle">
+                                            <span aria-hidden="true"
+                                                  class="password-icon-tooltip show-password-tooltip">Show password</span>
+
+                                            <span aria-hidden="true"
+                                                  class="password-icon-tooltip hide-password-tooltip hide">Hide password</span>
+
+                                            <span class="screen-reader-only password-toggle-label"
+                                                  data-label="show-password">Show password</span>
+
+                                            <span class="screen-reader-only password-toggle-label hide"
+                                                  data-label="hide-password">Hide password</span>
+
+                                            <span class="c1f38a288 password js-required" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="ulp-alternate-action  _alternate-action __s16nu9">
+
+                            <p class="cbd3adb25 c4e40f873">
+
+                                <a class="cad38ddb6 c452c1fcd ccef1b889"
+                                   href="/public/reset-password"
+                                   aria-label="">Forgot password?</a>
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="c7f45701e">
+
+                            <button type="submit" name="action" value="default"
+                                    class="c46ddf851 ce6872ff7 c4441db6e c921fd1e6 c4a536eed"
+                                    data-action-button-primary="true">Continue
+                            </button>
+
+                        </div>
+                    </form>
+
+
+                    <div class="ulp-alternate-action  _alternate-action __s16nu9">
+                        <p class="c7f987bb8 c6338b577 c7e6ea1b7">Don't have an account?
+                            <a class="cad38ddb6 ccef1b889"
+                               href="/shop/list"
+                               aria-label="">Sign up</a>
+                        </p>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</main>
+<footer class="footer">
+    By continuing, you agree to EDEB's <a href="/public/terms" target="_blank">Terms of Service</a> and <a
+        href="public/privacy" target="_blank">Privacy Policy</a>.
+</footer>
+
+
+</body>
+</html>
